@@ -67,6 +67,8 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - run: rfbrowser init
+      - name: Install WebKit dependencies
+        run: npx playwright install-deps webkit
       - name: Run tests on WebKit
         env:
           USERNAME: ${{ secrets.RF_USERNAME }}
@@ -106,6 +108,7 @@ jobs:
           path: results/webkit
 
       - name: Merge results
+        continue-on-error: true
         run: |
           rebot --outputdir results \
                 --output output.xml \
