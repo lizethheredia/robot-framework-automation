@@ -27,7 +27,7 @@ jobs:
           PASSWORD: ${{ secrets.RF_PASSWORD }}
         run: |
           pabot --processes 2 --variable BROWSER:chromium --variable HEADLESS:True \
-                --outputdir results/chromium tests/web/
+                --outputdir results/chromium --name Chromium tests/web/
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: always()
@@ -50,7 +50,7 @@ jobs:
           PASSWORD: ${{ secrets.RF_PASSWORD }}
         run: |
           pabot --processes 2 --variable BROWSER:firefox --variable HEADLESS:True \
-                --outputdir results/firefox tests/web/
+                --outputdir results/firefox --name Firefox tests/web/
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: always()
@@ -75,7 +75,7 @@ jobs:
           PASSWORD: ${{ secrets.RF_PASSWORD }}
         run: |
           pabot --processes 2 --variable BROWSER:webkit --variable HEADLESS:True \
-                --outputdir results/webkit tests/web/
+                --outputdir results/webkit --name WebKit tests/web/
         continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: always()
