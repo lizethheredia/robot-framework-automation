@@ -8,6 +8,8 @@ Test automation portfolio using Robot Framework — Web, API, Database, and File
 
 - [Robot Framework 7](https://robotframework.org/)
 - [Browser Library](https://robotframework-browser.org/) (Playwright-based)
+- [RequestsLibrary](https://github.com/MarketSquare/robotframework-requests) — API testing
+- [DatabaseLibrary](https://github.com/MarketSquare/robotframework-databaselibrary) — DB testing
 - Python 3.11
 
 ## Project Structure
@@ -61,8 +63,14 @@ PASSWORD=SuperSecretPassword!
 ## Running Tests
 
 ```bash
-# Run all web tests
+# Run ALL tests
+robot --outputdir results tests/
+
+# Run by module
 robot --outputdir results tests/web/
+robot --outputdir results tests/api/
+robot --outputdir results tests/database/
+robot --outputdir results tests/files/
 
 # Run a specific test file
 robot --outputdir results tests/web/login_test.robot
@@ -71,7 +79,10 @@ robot --outputdir results tests/web/login_test.robot
 robot --outputdir results --variable BROWSER:firefox tests/web/
 
 # Run in headless mode
-robot --outputdir results --variable BROWSER:chromium tests/web/
+robot --outputdir results --variable HEADLESS:True tests/web/
+
+# Run with a specific tag
+robot --outputdir results --include smoke tests/
 ```
 
 ## Test Report
@@ -82,7 +93,7 @@ After running, open the report:
 open results/report.html
 ```
 
-Or view the latest report on [GitHub Pages](https://lizethheredia.github.io/robot-framework-automation/report.html).
+Or view the latest CI report on [GitHub Pages](https://lizethheredia.github.io/robot-framework-automation/report.html).
 
 ## CI/CD
 
@@ -92,8 +103,9 @@ To configure secrets in GitHub:
 1. Go to Settings → Secrets and variables → Actions
 2. Add `RF_USERNAME` and `RF_PASSWORD`
 
-## Web Test Coverage
+## Test Coverage
 
+### Web (Browser Library + Playwright)
 | Test | Description |
 |------|-------------|
 | login_test | Valid and invalid login |
@@ -101,3 +113,18 @@ To configure secrets in GitHub:
 | alerts_test | JS alert, confirm, and prompt dialogs |
 | checkboxes_test | Check and uncheck checkboxes |
 | dynamic_content_test | Wait for dynamically loaded content |
+
+### API (RequestsLibrary)
+| Test | Description |
+|------|-------------|
+| users_api_test | GET user, GET all users, POST new post |
+
+### Database (DatabaseLibrary + SQLite)
+| Test | Description |
+|------|-------------|
+| users_db_test | Row count, user existence, role validation, query |
+
+### Files (OperatingSystem)
+| Test | Description |
+|------|-------------|
+| file_operations_test | Create, read, and verify text and CSV files |

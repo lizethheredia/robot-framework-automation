@@ -1,0 +1,19 @@
+{
+  "base_url": "https://jsonplaceholder.typicode.com",
+  "existing_user": {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz"
+  },
+  "new_post": {
+    "title": "Robot Framework Post",
+    "body": "Automated with Robot Framework",
+    "userId": 1
+  },
+  "new_user": {
+    "name": "Liz Heredia",
+    "username": "lizethheredia",
+    "email": "lizeth@example.com"
+  }
+}

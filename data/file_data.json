@@ -1,0 +1,13 @@
+{
+  "output_dir": "results/files",
+  "files": [
+    {
+      "filename": "hello.txt",
+      "content": "Hello from Robot Framework!"
+    },
+    {
+      "filename": "report.csv",
+      "content": "name,email,role\nAlice,alice@example.com,admin\nBob,bob@example.com,user"
+    }
+  ]
+}
