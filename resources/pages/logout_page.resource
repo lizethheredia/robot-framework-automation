@@ -9,6 +9,6 @@ ${FLASH_MESSAGE}    id=flash
 Click Logout Button
     Click    ${LOGOUT_BUTTON}
 
-Get Flash Message
+Get Logout Flash Message
     ${message}=    Get Text    ${FLASH_MESSAGE}
     RETURN    ${message}
