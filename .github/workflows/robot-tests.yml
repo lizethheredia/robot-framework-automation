@@ -1,0 +1,55 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Initialize Browser Library
+        run: rfbrowser init
+
+      - name: Run Robot Framework tests
+        env:
+          USERNAME: ${{ secrets.RF_USERNAME }}
+          PASSWORD: ${{ secrets.RF_PASSWORD }}
+        run: |
+          robot --outputdir results \
+                --loglevel INFO \
+                tests/web/
+        continue-on-error: true
+
+      - name: Upload test results as artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-results
+          path: results/
+
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: results
+          publish_branch: gh-pages
+          destination_dir: reports

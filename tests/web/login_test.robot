@@ -11,10 +11,10 @@ Valid Login
     Open Browser Session
     Login With Valid Credentials    ${username}    ${password}
     Login Should Succeed
-    [Teardown]    Close Browser Session
+    [Teardown]    Close Browser Session With Screenshot On Failure
 
 Invalid Login
     Open Browser Session
     Login With Valid Credentials    wronguser    wrongpassword
     Login Should Fail
-    [Teardown]    Close Browser Session
+    [Teardown]    Close Browser Session With Screenshot On Failure
