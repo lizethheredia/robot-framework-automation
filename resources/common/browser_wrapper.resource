@@ -1,10 +1,13 @@
 *** Settings ***
 Library    Browser
 
+*** Variables ***
+${HEADLESS}    False
+
 *** Keywords ***
 Open Browser Session
     [Arguments]    ${browser}=${BROWSER}
-    New Browser    ${browser}    headless=False
+    New Browser    ${browser}    headless=${HEADLESS}
     New Context    viewport={'width': 1280, 'height': 720}
 
 Close Browser Session

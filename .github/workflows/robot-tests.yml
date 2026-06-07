@@ -35,6 +35,7 @@ jobs:
         run: |
           robot --outputdir results \
                 --loglevel INFO \
+                --variable HEADLESS:True \
                 tests/web/
         continue-on-error: true
 
