@@ -16,4 +16,4 @@ Login And Logout
 Logout Should Succeed
     Wait For Elements State    ${FLASH_MESSAGE}    visible    timeout=10s
     ${message}=    Get Logout Flash Message
-    Should Contain    ${message}    You logged out of the Secure Area!
+    Should Contain    ${message}    logged out of the secure area
