@@ -82,7 +82,7 @@ After running, open the report:
 open results/report.html
 ```
 
-Or view the latest report on [GitHub Pages](https://lizethheredia.github.io/robot-framework-automation/reports/report.html).
+Or view the latest report on [GitHub Pages](https://lizethheredia.github.io/robot-framework-automation/report.html).
 
 ## CI/CD
 

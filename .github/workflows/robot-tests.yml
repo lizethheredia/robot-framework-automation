@@ -40,6 +40,11 @@ jobs:
                 --variable HEADLESS:True \
                 tests/web/
 
+      - name: Create index.html redirect
+        if: always()
+        run: |
+          echo '<meta http-equiv="refresh" content="0; url=report.html">' > results/index.html
+
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         if: always()
@@ -58,3 +63,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
