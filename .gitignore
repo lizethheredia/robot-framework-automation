@@ -2,3 +2,6 @@ results/
 venv/
 __pycache__/
 .env
+playwright-log.txt
+*.sqlite
+browser/
