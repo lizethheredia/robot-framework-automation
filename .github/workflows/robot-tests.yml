@@ -38,7 +38,9 @@ jobs:
           robot --outputdir results \
                 --loglevel INFO \
                 --variable HEADLESS:True \
+                --xunit results/xunit.xml \
                 tests/web/
+          python3 libraries/ReportCleaner.py
 
       - name: Create index.html redirect
         if: always()
