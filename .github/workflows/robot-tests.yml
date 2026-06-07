@@ -12,40 +12,101 @@ permissions:
   id-token: write
 
 jobs:
-  test:
+  test-chromium:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Initialize Browser Library
-        run: rfbrowser init
-
-      - name: Run cross-browser tests in parallel
+      - run: pip install -r requirements.txt
+      - run: rfbrowser init
+      - name: Run tests on Chromium
         env:
           USERNAME: ${{ secrets.RF_USERNAME }}
           PASSWORD: ${{ secrets.RF_PASSWORD }}
         run: |
-          mkdir -p results/chromium results/firefox results/webkit
+          pabot --processes 2 --variable BROWSER:chromium --variable HEADLESS:True \
+                --outputdir results/chromium tests/web/
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-chromium
+          path: results/chromium/output.xml
 
-          pabot --processes 2 --pabotlib-port 8270 --variable BROWSER:chromium --variable HEADLESS:True \
-                --outputdir results/chromium tests/web/ &
-          pabot --processes 2 --pabotlib-port 8271 --variable BROWSER:firefox --variable HEADLESS:True \
-                --outputdir results/firefox tests/web/ &
-          pabot --processes 2 --pabotlib-port 8272 --variable BROWSER:webkit --variable HEADLESS:True \
-                --outputdir results/webkit tests/web/ &
+  test-firefox:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: rfbrowser init
+      - name: Run tests on Firefox
+        env:
+          USERNAME: ${{ secrets.RF_USERNAME }}
+          PASSWORD: ${{ secrets.RF_PASSWORD }}
+        run: |
+          pabot --processes 2 --variable BROWSER:firefox --variable HEADLESS:True \
+                --outputdir results/firefox tests/web/
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-firefox
+          path: results/firefox/output.xml
 
-          wait
+  test-webkit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: rfbrowser init
+      - name: Run tests on WebKit
+        env:
+          USERNAME: ${{ secrets.RF_USERNAME }}
+          PASSWORD: ${{ secrets.RF_PASSWORD }}
+        run: |
+          pabot --processes 2 --variable BROWSER:webkit --variable HEADLESS:True \
+                --outputdir results/webkit tests/web/
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-webkit
+          path: results/webkit/output.xml
 
+  report:
+    needs: [test-chromium, test-firefox, test-webkit]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: results-chromium
+          path: results/chromium
+      - uses: actions/download-artifact@v4
+        with:
+          name: results-firefox
+          path: results/firefox
+      - uses: actions/download-artifact@v4
+        with:
+          name: results-webkit
+          path: results/webkit
+
+      - name: Merge results
+        run: |
           rebot --outputdir results \
                 --output output.xml \
                 --log log.html \
@@ -53,28 +114,22 @@ jobs:
                 results/chromium/output.xml \
                 results/firefox/output.xml \
                 results/webkit/output.xml
-
           python3 libraries/ReportCleaner.py
 
       - name: Create index.html redirect
-        if: always()
-        run: |
-          echo '<meta http-equiv="refresh" content="0; url=report.html">' > results/index.html
+        run: echo '<meta http-equiv="refresh" content="0; url=report.html">' > results/index.html
 
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
-        if: always()
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: results/
 
   deploy:
-    needs: test
+    needs: report
     runs-on: ubuntu-latest
     if: always()
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
