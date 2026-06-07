@@ -1,4 +1,5 @@
 results/
+pabot_results/
 venv/
 __pycache__/
 .env
