@@ -30,16 +30,30 @@ jobs:
       - name: Initialize Browser Library
         run: rfbrowser init
 
-      - name: Run Robot Framework tests
+      - name: Run cross-browser tests in parallel
         env:
           USERNAME: ${{ secrets.RF_USERNAME }}
           PASSWORD: ${{ secrets.RF_PASSWORD }}
         run: |
-          robot --outputdir results \
-                --loglevel INFO \
-                --variable HEADLESS:True \
-                --xunit results/xunit.xml \
-                tests/web/
+          mkdir -p results/chromium results/firefox results/webkit
+
+          pabot --processes 2 --pabotlib-port 8270 --variable BROWSER:chromium --variable HEADLESS:True \
+                --outputdir results/chromium tests/web/ &
+          pabot --processes 2 --pabotlib-port 8271 --variable BROWSER:firefox --variable HEADLESS:True \
+                --outputdir results/firefox tests/web/ &
+          pabot --processes 2 --pabotlib-port 8272 --variable BROWSER:webkit --variable HEADLESS:True \
+                --outputdir results/webkit tests/web/ &
+
+          wait
+
+          rebot --outputdir results \
+                --output output.xml \
+                --log log.html \
+                --report report.html \
+                results/chromium/output.xml \
+                results/firefox/output.xml \
+                results/webkit/output.xml
+
           python3 libraries/ReportCleaner.py
 
       - name: Create index.html redirect

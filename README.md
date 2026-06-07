@@ -10,6 +10,7 @@ Test automation portfolio using Robot Framework — Web, API, Database, and File
 - [Browser Library](https://robotframework-browser.org/) (Playwright-based)
 - [RequestsLibrary](https://github.com/MarketSquare/robotframework-requests) — API testing
 - [DatabaseLibrary](https://github.com/MarketSquare/robotframework-databaselibrary) — DB testing
+- [Pabot](https://github.com/MarketSquare/robotframework-pabot) — parallel execution
 - Python 3.11
 
 ## Project Structure
@@ -83,6 +84,12 @@ robot --outputdir results --variable HEADLESS:True tests/web/
 
 # Run with a specific tag
 robot --outputdir results --include smoke tests/
+
+# Run in parallel (same browser, multiple suites)
+pabot --processes 3 --outputdir results tests/web/
+
+# Run cross-browser in parallel (Chromium + Firefox + WebKit simultaneously)
+./run_cross_browser.sh
 ```
 
 ## Test Report

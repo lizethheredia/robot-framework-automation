@@ -1,0 +1,16 @@
+--suite Web.Logout Test
+--variable CALLER_ID:3f9e5539e2ee47aa984f0507d524a267
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:4
+--variable PABOTLASTLEVEL:
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir ./pabot_results/4
+--consolecolors off
+--consolemarkers off
+tests/web/

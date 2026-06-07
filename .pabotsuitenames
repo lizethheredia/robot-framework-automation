@@ -1,0 +1,9 @@
+datasources:93a205b46ccc99ea0a1b64b82dace3f81a44f40a
+commandlineoptions:521a53cbb25a3472e65db620d85889dbb4afc641
+suitesfrom:no-suites-from-option
+file:783176af2114bc23371e3f6f41a727cd79c1957b
+--suite Web.Alerts Test
+--suite Web.Checkboxes Test
+--suite Web.Dynamic Content Test
+--suite Web.Login Test
+--suite Web.Logout Test

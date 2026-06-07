@@ -1,0 +1,16 @@
+--suite Web.Dynamic Content Test
+--variable CALLER_ID:cd58bc5a581c41a0818b8ed9c85c0887
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:2
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:2
+--variable PABOTLASTLEVEL:Web.Dynamic Content Test
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir ./pabot_results/2
+--consolecolors off
+--consolemarkers off
+tests/web/
