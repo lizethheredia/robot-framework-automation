@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.11.15 on linux)" generated="2026-06-07T21:20:00.681277" rpa="false" schemaversion="5">
+<suite id="s1" name="Web" source="/home/runner/work/robot-framework-automation/robot-framework-automation/tests/web">
+<suite id="s1-s1" name="Alerts Test" source="/home/runner/work/robot-framework-automation/robot-framework-automation/tests/web/alerts_test.robot">
+<test id="s1-s1-t1" name="Handle JS Alert" line="6">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:00.851312" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/fc16a39e-ede4-4ca5-b207-78a4dde3877e"}</msg>
+<msg time="2026-06-07T21:20:00.856611" level="INFO">Starting Browser process /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/index.js using at 127.0.0.1:47361</msg>
+<msg time="2026-06-07T21:20:01.610886" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.611004" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.611418" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xIvRrd --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3202
+  - [pid=3202][err] [3202:3202:0607/212001.585521:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3202][err] [3202:3202:0607/212001.585548:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3202] &lt;gracefully close start&gt;
+  - [pid=3202] &lt;kill&gt;
+  - [pid=3202] &lt;will force kill&gt;
+  - [pid=3202] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3202] starting temporary directories cleanup
+  - [pid=3202] finished temporary directories cleanup
+  - [pid=3202] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:00.850600" elapsed="0.768715">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xIvRrd --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3202
+  - [pid=3202][err] [3202:3202:0607/212001.585521:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3202][err] [3202:3202:0607/212001.585548:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3202] &lt;gracefully close start&gt;
+  - [pid=3202] &lt;kill&gt;
+  - [pid=3202] &lt;will force kill&gt;
+  - [pid=3202] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3202] starting temporary directories cleanup
+  - [pid=3202] finished temporary directories cleanup
+  - [pid=3202] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:01.619600" elapsed="0.000088"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:00.849842" elapsed="0.770066">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xIvRrd --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3202
+  - [pid=3202][err] [3202:3202:0607/212001.585521:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3202][err] [3202:3202:0607/212001.585548:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3202] &lt;gracefully close start&gt;
+  - [pid=3202] &lt;kill&gt;
+  - [pid=3202] &lt;will force kill&gt;
+  - [pid=3202] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3202] starting temporary directories cleanup
+  - [pid=3202] finished temporary directories cleanup
+  - [pid=3202] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Handle JS Alert" owner="alerts_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:01.620188" elapsed="0.000080"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:01.628095" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.628220" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.628349" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.621362" elapsed="0.007873">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.620896" elapsed="0.008454">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.632346" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:01.629517" elapsed="0.002927"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.620555" elapsed="0.012047">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:00.849161" elapsed="0.783539">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xIvRrd --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3202
+  - [pid=3202][err] [3202:3202:0607/212001.585521:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3202][err] [3202:3202:0607/212001.585548:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3202] &lt;gracefully close start&gt;
+  - [pid=3202] &lt;kill&gt;
+  - [pid=3202] &lt;will force kill&gt;
+  - [pid=3202] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3202] starting temporary directories cleanup
+  - [pid=3202] finished temporary directories cleanup
+  - [pid=3202] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<test id="s1-s1-t2" name="Handle JS Confirm Accept" line="11">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.644676" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/97906ad6-b32a-412a-85e2-94ff39fe5048"}</msg>
+<msg time="2026-06-07T21:20:01.723359" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.723466" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.723635" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-VBBIMW --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3223
+  - [pid=3223][err] [3223:3223:0607/212001.708224:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3223][err] [3223:3223:0607/212001.708259:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3223] &lt;gracefully close start&gt;
+  - [pid=3223] &lt;kill&gt;
+  - [pid=3223] &lt;will force kill&gt;
+  - [pid=3223] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3223] starting temporary directories cleanup
+  - [pid=3223] finished temporary directories cleanup
+  - [pid=3223] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.643982" elapsed="0.080420">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-VBBIMW --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3223
+  - [pid=3223][err] [3223:3223:0607/212001.708224:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3223][err] [3223:3223:0607/212001.708259:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3223] &lt;gracefully close start&gt;
+  - [pid=3223] &lt;kill&gt;
+  - [pid=3223] &lt;will force kill&gt;
+  - [pid=3223] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3223] starting temporary directories cleanup
+  - [pid=3223] finished temporary directories cleanup
+  - [pid=3223] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:01.724641" elapsed="0.000073"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.643610" elapsed="0.081258">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-VBBIMW --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3223
+  - [pid=3223][err] [3223:3223:0607/212001.708224:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3223][err] [3223:3223:0607/212001.708259:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3223] &lt;gracefully close start&gt;
+  - [pid=3223] &lt;kill&gt;
+  - [pid=3223] &lt;will force kill&gt;
+  - [pid=3223] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3223] starting temporary directories cleanup
+  - [pid=3223] finished temporary directories cleanup
+  - [pid=3223] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Handle JS Confirm Accept" owner="alerts_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:01.725116" elapsed="0.000099"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:01.731464" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.731541" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.731646" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.726126" elapsed="0.006147">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.725773" elapsed="0.006586">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.734436" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:01.732481" elapsed="0.002038"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.725472" elapsed="0.009171">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.639328" elapsed="0.095383">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-VBBIMW --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3223
+  - [pid=3223][err] [3223:3223:0607/212001.708224:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3223][err] [3223:3223:0607/212001.708259:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3223] &lt;gracefully close start&gt;
+  - [pid=3223] &lt;kill&gt;
+  - [pid=3223] &lt;will force kill&gt;
+  - [pid=3223] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3223] starting temporary directories cleanup
+  - [pid=3223] finished temporary directories cleanup
+  - [pid=3223] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<test id="s1-s1-t3" name="Handle JS Confirm Dismiss" line="16">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.743669" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/07107e9e-9cee-4860-a965-84de4760f22b"}</msg>
+<msg time="2026-06-07T21:20:01.820508" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.820623" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.820780" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-Ipi6z1 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3244
+  - [pid=3244][err] [3244:3244:0607/212001.806807:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3244][err] [3244:3244:0607/212001.806837:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3244] &lt;gracefully close start&gt;
+  - [pid=3244] &lt;kill&gt;
+  - [pid=3244] &lt;will force kill&gt;
+  - [pid=3244] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3244] starting temporary directories cleanup
+  - [pid=3244] finished temporary directories cleanup
+  - [pid=3244] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.743047" elapsed="0.078560">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-Ipi6z1 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3244
+  - [pid=3244][err] [3244:3244:0607/212001.806807:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3244][err] [3244:3244:0607/212001.806837:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3244] &lt;gracefully close start&gt;
+  - [pid=3244] &lt;kill&gt;
+  - [pid=3244] &lt;will force kill&gt;
+  - [pid=3244] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3244] starting temporary directories cleanup
+  - [pid=3244] finished temporary directories cleanup
+  - [pid=3244] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:01.821840" elapsed="0.000074"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.742714" elapsed="0.079352">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-Ipi6z1 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3244
+  - [pid=3244][err] [3244:3244:0607/212001.806807:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3244][err] [3244:3244:0607/212001.806837:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3244] &lt;gracefully close start&gt;
+  - [pid=3244] &lt;kill&gt;
+  - [pid=3244] &lt;will force kill&gt;
+  - [pid=3244] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3244] starting temporary directories cleanup
+  - [pid=3244] finished temporary directories cleanup
+  - [pid=3244] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Handle JS Confirm Dismiss" owner="alerts_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:01.822360" elapsed="0.000068"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:01.829619" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.829704" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.829807" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.823374" elapsed="0.007054">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.822969" elapsed="0.007551">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.832501" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:01.830647" elapsed="0.001935"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.822676" elapsed="0.010033">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.739448" elapsed="0.093338">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-Ipi6z1 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3244
+  - [pid=3244][err] [3244:3244:0607/212001.806807:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3244][err] [3244:3244:0607/212001.806837:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3244] &lt;gracefully close start&gt;
+  - [pid=3244] &lt;kill&gt;
+  - [pid=3244] &lt;will force kill&gt;
+  - [pid=3244] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3244] starting temporary directories cleanup
+  - [pid=3244] finished temporary directories cleanup
+  - [pid=3244] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<test id="s1-s1-t4" name="Handle JS Prompt With Text" line="21">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.841425" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/3e29f954-399b-4a68-aee9-88f7539d5797"}</msg>
+<msg time="2026-06-07T21:20:01.918084" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.918236" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.918390" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-YWS8ou --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3265
+  - [pid=3265][err] [3265:3265:0607/212001.905447:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3265][err] [3265:3265:0607/212001.905487:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3265] &lt;gracefully close start&gt;
+  - [pid=3265] &lt;kill&gt;
+  - [pid=3265] &lt;will force kill&gt;
+  - [pid=3265] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3265] starting temporary directories cleanup
+  - [pid=3265] finished temporary directories cleanup
+  - [pid=3265] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.840811" elapsed="0.078266">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-YWS8ou --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3265
+  - [pid=3265][err] [3265:3265:0607/212001.905447:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3265][err] [3265:3265:0607/212001.905487:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3265] &lt;gracefully close start&gt;
+  - [pid=3265] &lt;kill&gt;
+  - [pid=3265] &lt;will force kill&gt;
+  - [pid=3265] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3265] starting temporary directories cleanup
+  - [pid=3265] finished temporary directories cleanup
+  - [pid=3265] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:01.919348" elapsed="0.000072"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.840467" elapsed="0.079102">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-YWS8ou --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3265
+  - [pid=3265][err] [3265:3265:0607/212001.905447:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3265][err] [3265:3265:0607/212001.905487:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3265] &lt;gracefully close start&gt;
+  - [pid=3265] &lt;kill&gt;
+  - [pid=3265] &lt;will force kill&gt;
+  - [pid=3265] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3265] starting temporary directories cleanup
+  - [pid=3265] finished temporary directories cleanup
+  - [pid=3265] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Handle JS Prompt" owner="alerts_keywords">
+<arg>Hello Robot!</arg>
+<status status="NOT RUN" start="2026-06-07T21:20:01.919803" elapsed="0.000062"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:01.925859" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:01.925946" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:01.926054" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.920781" elapsed="0.005888">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.920432" elapsed="0.006325">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.928670" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:01.926885" elapsed="0.001864"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.920106" elapsed="0.008772">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.837131" elapsed="0.091827">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-YWS8ou --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3265
+  - [pid=3265][err] [3265:3265:0607/212001.905447:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3265][err] [3265:3265:0607/212001.905487:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3265] &lt;gracefully close start&gt;
+  - [pid=3265] &lt;kill&gt;
+  - [pid=3265] &lt;will force kill&gt;
+  - [pid=3265] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3265] starting temporary directories cleanup
+  - [pid=3265] finished temporary directories cleanup
+  - [pid=3265] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<status status="FAIL" start="2026-06-07T21:20:00.712206" elapsed="1.221017"/>
+</suite>
+<suite id="s1-s2" name="Checkboxes Test" source="/home/runner/work/robot-framework-automation/robot-framework-automation/tests/web/checkboxes_test.robot">
+<test id="s1-s2-t1" name="Check First Checkbox" line="6">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:01.955894" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/d801cd5f-f51f-42a3-80cb-a0eb65eb348d"}</msg>
+<msg time="2026-06-07T21:20:02.033553" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.033659" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.033806" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xEszZX --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3286
+  - [pid=3286][err] [3286:3286:0607/212002.020938:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3286][err] [3286:3286:0607/212002.020979:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3286] &lt;gracefully close start&gt;
+  - [pid=3286] &lt;kill&gt;
+  - [pid=3286] &lt;will force kill&gt;
+  - [pid=3286] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3286] starting temporary directories cleanup
+  - [pid=3286] finished temporary directories cleanup
+  - [pid=3286] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:01.955069" elapsed="0.079550">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xEszZX --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3286
+  - [pid=3286][err] [3286:3286:0607/212002.020938:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3286][err] [3286:3286:0607/212002.020979:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3286] &lt;gracefully close start&gt;
+  - [pid=3286] &lt;kill&gt;
+  - [pid=3286] &lt;will force kill&gt;
+  - [pid=3286] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3286] starting temporary directories cleanup
+  - [pid=3286] finished temporary directories cleanup
+  - [pid=3286] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:02.034860" elapsed="0.000075"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.954608" elapsed="0.080485">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xEszZX --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3286
+  - [pid=3286][err] [3286:3286:0607/212002.020938:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3286][err] [3286:3286:0607/212002.020979:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3286] &lt;gracefully close start&gt;
+  - [pid=3286] &lt;kill&gt;
+  - [pid=3286] &lt;will force kill&gt;
+  - [pid=3286] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3286] starting temporary directories cleanup
+  - [pid=3286] finished temporary directories cleanup
+  - [pid=3286] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Check First Checkbox" owner="checkboxes_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:02.035402" elapsed="0.000066"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:02.041483" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.041556" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.041653" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.036413" elapsed="0.005860">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.035998" elapsed="0.006359">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.044169" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:02.042477" elapsed="0.001795"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.035710" elapsed="0.008680">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:01.950051" elapsed="0.094407">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-xEszZX --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3286
+  - [pid=3286][err] [3286:3286:0607/212002.020938:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3286][err] [3286:3286:0607/212002.020979:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3286] &lt;gracefully close start&gt;
+  - [pid=3286] &lt;kill&gt;
+  - [pid=3286] &lt;will force kill&gt;
+  - [pid=3286] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3286] starting temporary directories cleanup
+  - [pid=3286] finished temporary directories cleanup
+  - [pid=3286] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<test id="s1-s2-t2" name="Uncheck Second Checkbox" line="11">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.052924" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/354cea80-4218-411b-b0ff-de1f93783503"}</msg>
+<msg time="2026-06-07T21:20:02.129892" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.129994" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.130237" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-1Y45dn --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3307
+  - [pid=3307][err] [3307:3307:0607/212002.116616:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3307][err] [3307:3307:0607/212002.116645:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3307] &lt;gracefully close start&gt;
+  - [pid=3307] &lt;kill&gt;
+  - [pid=3307] &lt;will force kill&gt;
+  - [pid=3307] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3307] starting temporary directories cleanup
+  - [pid=3307] finished temporary directories cleanup
+  - [pid=3307] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.052328" elapsed="0.078616">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-1Y45dn --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3307
+  - [pid=3307][err] [3307:3307:0607/212002.116616:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3307][err] [3307:3307:0607/212002.116645:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3307] &lt;gracefully close start&gt;
+  - [pid=3307] &lt;kill&gt;
+  - [pid=3307] &lt;will force kill&gt;
+  - [pid=3307] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3307] starting temporary directories cleanup
+  - [pid=3307] finished temporary directories cleanup
+  - [pid=3307] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:02.131204" elapsed="0.000074"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.051934" elapsed="0.079486">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-1Y45dn --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3307
+  - [pid=3307][err] [3307:3307:0607/212002.116616:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3307][err] [3307:3307:0607/212002.116645:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3307] &lt;gracefully close start&gt;
+  - [pid=3307] &lt;kill&gt;
+  - [pid=3307] &lt;will force kill&gt;
+  - [pid=3307] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3307] starting temporary directories cleanup
+  - [pid=3307] finished temporary directories cleanup
+  - [pid=3307] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Uncheck Second Checkbox" owner="checkboxes_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:02.131646" elapsed="0.000061"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:02.138588" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.138661" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.138756" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.132596" elapsed="0.006769">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.132247" elapsed="0.007200">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.141242" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:02.139564" elapsed="0.001755"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.131938" elapsed="0.009496">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.048719" elapsed="0.092782">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-1Y45dn --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3307
+  - [pid=3307][err] [3307:3307:0607/212002.116616:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3307][err] [3307:3307:0607/212002.116645:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3307] &lt;gracefully close start&gt;
+  - [pid=3307] &lt;kill&gt;
+  - [pid=3307] &lt;will force kill&gt;
+  - [pid=3307] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3307] starting temporary directories cleanup
+  - [pid=3307] finished temporary directories cleanup
+  - [pid=3307] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<status status="FAIL" start="2026-06-07T21:20:01.937713" elapsed="0.207929"/>
+</suite>
+<suite id="s1-s3" name="Dynamic Content Test" source="/home/runner/work/robot-framework-automation/robot-framework-automation/tests/web/dynamic_content_test.robot">
+<test id="s1-s3-t1" name="Dynamic Content Loads Successfully" line="6">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.161288" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/34ed70b5-3ed6-4ba8-810e-a14ae5e0b3d5"}</msg>
+<msg time="2026-06-07T21:20:02.239705" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.239815" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.239965" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-0hsS0E --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3328
+  - [pid=3328][err] [3328:3328:0607/212002.225950:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3328][err] [3328:3328:0607/212002.225985:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3328] &lt;gracefully close start&gt;
+  - [pid=3328] &lt;kill&gt;
+  - [pid=3328] &lt;will force kill&gt;
+  - [pid=3328] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3328] starting temporary directories cleanup
+  - [pid=3328] finished temporary directories cleanup
+  - [pid=3328] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.160703" elapsed="0.080068">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-0hsS0E --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3328
+  - [pid=3328][err] [3328:3328:0607/212002.225950:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3328][err] [3328:3328:0607/212002.225985:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3328] &lt;gracefully close start&gt;
+  - [pid=3328] &lt;kill&gt;
+  - [pid=3328] &lt;will force kill&gt;
+  - [pid=3328] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3328] starting temporary directories cleanup
+  - [pid=3328] finished temporary directories cleanup
+  - [pid=3328] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:02.241010" elapsed="0.000072"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.160387" elapsed="0.080886">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-0hsS0E --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3328
+  - [pid=3328][err] [3328:3328:0607/212002.225950:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3328][err] [3328:3328:0607/212002.225985:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3328] &lt;gracefully close start&gt;
+  - [pid=3328] &lt;kill&gt;
+  - [pid=3328] &lt;will force kill&gt;
+  - [pid=3328] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3328] starting temporary directories cleanup
+  - [pid=3328] finished temporary directories cleanup
+  - [pid=3328] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Load Dynamic Content And Verify" owner="dynamic_content_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:02.241487" elapsed="0.000064"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:02.247326" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.247400" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.247495" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.242450" elapsed="0.005604">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.242064" elapsed="0.006071">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.250025" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:02.248298" elapsed="0.001838"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.241788" elapsed="0.008538">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.157518" elapsed="0.092904">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-0hsS0E --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3328
+  - [pid=3328][err] [3328:3328:0607/212002.225950:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3328][err] [3328:3328:0607/212002.225985:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3328] &lt;gracefully close start&gt;
+  - [pid=3328] &lt;kill&gt;
+  - [pid=3328] &lt;will force kill&gt;
+  - [pid=3328] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3328] starting temporary directories cleanup
+  - [pid=3328] finished temporary directories cleanup
+  - [pid=3328] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<status status="FAIL" start="2026-06-07T21:20:02.149949" elapsed="0.107932"/>
+</suite>
+<suite id="s1-s4" name="Login Test" source="/home/runner/work/robot-framework-automation/robot-framework-automation/tests/web/login_test.robot">
+<test id="s1-s4-t1" name="Valid Login" line="7">
+<kw name="Load Env" owner="EnvLoader">
+<status status="PASS" start="2026-06-07T21:20:02.279272" elapsed="0.000329"/>
+</kw>
+<kw name="Get Env Variable" owner="EnvLoader">
+<msg time="2026-06-07T21:20:02.279885" level="FAIL">ValueError: Environment variable 'USERNAME' not found</msg>
+<var>${username}</var>
+<arg>USERNAME</arg>
+<status status="FAIL" start="2026-06-07T21:20:02.279722" elapsed="0.000398">ValueError: Environment variable 'USERNAME' not found</status>
+</kw>
+<kw name="Get Env Variable" owner="EnvLoader">
+<var>${password}</var>
+<arg>PASSWORD</arg>
+<status status="NOT RUN" start="2026-06-07T21:20:02.280262" elapsed="0.000056"/>
+</kw>
+<kw name="Open Browser Session" owner="browser_wrapper">
+<status status="NOT RUN" start="2026-06-07T21:20:02.280463" elapsed="0.000054"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="login_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2026-06-07T21:20:02.280639" elapsed="0.000050"/>
+</kw>
+<kw name="Login Should Succeed" owner="login_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:02.280805" elapsed="0.000047"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:02.286889" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.286974" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.287079" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.281662" elapsed="0.006052">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.281328" elapsed="0.006476">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.289739" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:02.287940" elapsed="0.001879"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.281058" elapsed="0.008896">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.276324" elapsed="0.013702">ValueError: Environment variable 'USERNAME' not found
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<test id="s1-s4-t2" name="Invalid Login" line="16">
+<kw name="Open Browser Session" owner="browser_wrapper">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.297910" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/runner/work/robot-framework-automation/robot-framework-automation/results/browser/traces/temp/37651f83-96b1-4b48-88cc-9cc41877837a"}</msg>
+<msg time="2026-06-07T21:20:02.374922" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.375025" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.375213" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-JwEwpI --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3349
+  - [pid=3349][err] [3349:3349:0607/212002.362074:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3349][err] [3349:3349:0607/212002.362110:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3349] &lt;gracefully close start&gt;
+  - [pid=3349] &lt;kill&gt;
+  - [pid=3349] &lt;will force kill&gt;
+  - [pid=3349] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3349] starting temporary directories cleanup
+  - [pid=3349] finished temporary directories cleanup
+  - [pid=3349] &lt;gracefully close end&gt;
+</msg>
+<arg>${browser}</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.297364" elapsed="0.078560">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-JwEwpI --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3349
+  - [pid=3349][err] [3349:3349:0607/212002.362074:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3349][err] [3349:3349:0607/212002.362110:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3349] &lt;gracefully close start&gt;
+  - [pid=3349] &lt;kill&gt;
+  - [pid=3349] &lt;will force kill&gt;
+  - [pid=3349] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3349] starting temporary directories cleanup
+  - [pid=3349] finished temporary directories cleanup
+  - [pid=3349] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="New Context" owner="Browser">
+<arg>viewport={'width': 1280, 'height': 720}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="NOT RUN" start="2026-06-07T21:20:02.376242" elapsed="0.000075"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.297012" elapsed="0.079447">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-JwEwpI --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3349
+  - [pid=3349][err] [3349:3349:0607/212002.362074:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3349][err] [3349:3349:0607/212002.362110:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3349] &lt;gracefully close start&gt;
+  - [pid=3349] &lt;kill&gt;
+  - [pid=3349] &lt;will force kill&gt;
+  - [pid=3349] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3349] starting temporary directories cleanup
+  - [pid=3349] finished temporary directories cleanup
+  - [pid=3349] &lt;gracefully close end&gt;</status>
+</kw>
+<kw name="Login With Valid Credentials" owner="login_keywords">
+<arg>wronguser</arg>
+<arg>wrongpassword</arg>
+<status status="NOT RUN" start="2026-06-07T21:20:02.376658" elapsed="0.000061"/>
+</kw>
+<kw name="Login Should Fail" owner="login_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:02.376843" elapsed="0.000048"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:02.382748" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.382820" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.382911" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.377765" elapsed="0.005729">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.377433" elapsed="0.006141">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.385438" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:02.383701" elapsed="0.001813"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.377111" elapsed="0.008516">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.294192" elapsed="0.091500">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1223/chrome-linux64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occl...
+    [ Message content over the limit has been removed. ]
+...able-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-JwEwpI --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=3349
+  - [pid=3349][err] [3349:3349:0607/212002.362074:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:257] Missing X server or $DISPLAY
+  - [pid=3349][err] [3349:3349:0607/212002.362110:ERROR:ui/aura/env.cc:246] The platform failed to initialize.  Exiting.
+  - [pid=3349] &lt;gracefully close start&gt;
+  - [pid=3349] &lt;kill&gt;
+  - [pid=3349] &lt;will force kill&gt;
+  - [pid=3349] &lt;process did exit: exitCode=1, signal=null&gt;
+  - [pid=3349] starting temporary directories cleanup
+  - [pid=3349] finished temporary directories cleanup
+  - [pid=3349] &lt;gracefully close end&gt;
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<status status="FAIL" start="2026-06-07T21:20:02.263038" elapsed="0.126697"/>
+</suite>
+<suite id="s1-s5" name="Logout Test" source="/home/runner/work/robot-framework-automation/robot-framework-automation/tests/web/logout_test.robot">
+<test id="s1-s5-t1" name="Valid Logout" line="7">
+<kw name="Load Env" owner="EnvLoader">
+<status status="PASS" start="2026-06-07T21:20:02.407050" elapsed="0.000326"/>
+</kw>
+<kw name="Get Env Variable" owner="EnvLoader">
+<msg time="2026-06-07T21:20:02.407645" level="FAIL">ValueError: Environment variable 'USERNAME' not found</msg>
+<var>${username}</var>
+<arg>USERNAME</arg>
+<status status="FAIL" start="2026-06-07T21:20:02.407490" elapsed="0.000321">ValueError: Environment variable 'USERNAME' not found</status>
+</kw>
+<kw name="Get Env Variable" owner="EnvLoader">
+<var>${password}</var>
+<arg>PASSWORD</arg>
+<status status="NOT RUN" start="2026-06-07T21:20:02.407924" elapsed="0.000051"/>
+</kw>
+<kw name="Open Browser Session" owner="browser_wrapper">
+<status status="NOT RUN" start="2026-06-07T21:20:02.408117" elapsed="0.000093"/>
+</kw>
+<kw name="Login And Logout" owner="logout_keywords">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2026-06-07T21:20:02.408348" elapsed="0.000051"/>
+</kw>
+<kw name="Logout Should Succeed" owner="logout_keywords">
+<status status="NOT RUN" start="2026-06-07T21:20:02.408519" elapsed="0.000047"/>
+</kw>
+<kw name="Close Browser Session With Screenshot On Failure" owner="browser_wrapper" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2026-06-07T21:20:02.414346" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2026-06-07T21:20:02.414424" level="INFO">See also file:///home/runner/work/robot-framework-automation/robot-framework-automation/results/playwright-log.txt for additional details.</msg>
+<msg time="2026-06-07T21:20:02.414518" level="FAIL">Error: Tried to take screenshot, but no page was open.</msg>
+<arg>filename=FAIL-{index}</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.409354" elapsed="0.005744">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<arg>Take Screenshot</arg>
+<arg>filename=FAIL-{index}</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="FAIL" start="2026-06-07T21:20:02.409013" elapsed="0.006223">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-06-07T21:20:02.417084" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-07T21:20:02.415366" elapsed="0.001836"/>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.408761" elapsed="0.008565">Error: Tried to take screenshot, but no page was open.</status>
+</kw>
+<status status="FAIL" start="2026-06-07T21:20:02.404190" elapsed="0.013201">ValueError: Environment variable 'USERNAME' not found
+
+Also teardown failed:
+Error: Tried to take screenshot, but no page was open.</status>
+</test>
+<status status="FAIL" start="2026-06-07T21:20:02.394057" elapsed="0.027581"/>
+</suite>
+<status status="FAIL" start="2026-06-07T21:20:00.682048" elapsed="1.744066"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="10" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Web" id="s1" pass="0" fail="10" skip="0">Web</stat>
+<stat name="Alerts Test" id="s1-s1" pass="0" fail="4" skip="0">Web.Alerts Test</stat>
+<stat name="Checkboxes Test" id="s1-s2" pass="0" fail="2" skip="0">Web.Checkboxes Test</stat>
+<stat name="Dynamic Content Test" id="s1-s3" pass="0" fail="1" skip="0">Web.Dynamic Content Test</stat>
+<stat name="Login Test" id="s1-s4" pass="0" fail="2" skip="0">Web.Login Test</stat>
+<stat name="Logout Test" id="s1-s5" pass="0" fail="1" skip="0">Web.Logout Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
